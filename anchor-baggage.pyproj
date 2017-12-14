@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4d7825ca-f300-4a23-a442-4104fb5e104c}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="anchor-word-recovery\docword.nips.txt" />
+    <Content Include="anchor-word-recovery\gpl-3.0.txt" />
+    <Content Include="anchor-word-recovery\README.txt" />
+    <Content Include="anchor-word-recovery\stopwords.txt" />
+    <Content Include="anchor-word-recovery\visual_dictionary.txt" />
+    <Content Include="anchor-word-recovery\vocab.nips.txt" />
+    <Content Include="results\20-topic-1.png" />
+    <Content Include="results\20-topic-11.png" />
+    <Content Include="results\20-topic-9.png" />
+    <Content Include="results\visual-experiment_L2_out.documents.20.A.txt" />
+    <Content Include="results\visual-experiment_L2_out.documents.5.A.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="anchor-word-recovery\anchors.py" />
+    <Compile Include="anchor-word-recovery\fastRecover.py" />
+    <Compile Include="anchor-word-recovery\gram_schmidt_stable.py" />
+    <Compile Include="anchor-word-recovery\helper_functions.py" />
+    <Compile Include="anchor-word-recovery\learn_topics.py" />
+    <Compile Include="anchor-word-recovery\Q_matrix.py" />
+    <Compile Include="anchor-word-recovery\random_projection.py" />
+    <Compile Include="anchor-word-recovery\truncate_vocabulary.py" />
+    <Compile Include="anchor-word-recovery\uci_to_scipy.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="anchor-word-recovery" />
+    <Folder Include="results" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
