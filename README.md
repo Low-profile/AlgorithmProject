@@ -2,7 +2,7 @@
 
 Ideas:
 
-1. Change the language model of the document model, change the bag-of-words model to n-gram.
+1.Change the language model of the document model, change the bag-of-words model to n-gram.
 
 Similiar to:
 https://github.com/ars-ashuha/bigram-anchor-words
